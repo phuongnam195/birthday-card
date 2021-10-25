@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A project for you - Birthday Card">
+  <meta name="author" content="Phuong Nam - phuongnam195">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="birthday_card">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <title>Birthday Card</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  <script>
+    $(window).on("load", function () {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+  <script>
+    import "../secret.json"
+    const firebaseConfig = {
+      apiKey: "...",
+      authDomain: "justsomethingfromme.firebaseapp.com",
+      projectId: "justsomethingfromme",
+      storageBucket: "justsomethingfromme.appspot.com",
+      messagingSenderId: "1073454810055",
+      appId: "1:1073454810055:web:7b16a54147460b97b80fe2"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="main.dart.js" type="application/javascript"></script>
+  </script>
+</body>
+
+</html>
